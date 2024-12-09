@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Globe } from 'lucide-react';
+import Figma from '../Assets/Figma.svg'
+
 
 interface SearchBarProps {
   onSearch: (city: string) => void;
@@ -18,7 +20,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, onLocationClick 
   };
 
   return (
-    <div className="flex gap-8">
+    <div className="flex gap-8 items-center">
       <form onSubmit={handleSubmit} className="flex-1">
         <label className="flex flex-col min-w-40 !h-10 max-w-64">
           <div className="flex w-full flex-1 items-stretch rounded-xl h-full">
@@ -41,6 +43,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, onLocationClick 
       >
         <Globe size={20} />
       </button>
+
+      <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">
+      <img src={Figma} className="w w-8 h-8 cursor-pointer" alt="Figma logo" />
+    </a>
+
     </div>
   );
 };
