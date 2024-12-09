@@ -44,7 +44,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, onLocationClick 
         <Globe size={20} />
       </button>
 
-      <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.figma.com/design/nrq7mSMPKMQHEJKLRuhn7K/Weatherly?node-id=2-2&t=sHRyj2XuZCjGiWDE-1" target="_blank" rel="noopener noreferrer">
       <img src={Figma} className="w w-8 h-8 cursor-pointer" alt="Figma logo" />
     </a>
 
