@@ -19,22 +19,8 @@ Weatherly is a modern weather application built using React with TypeScript, lev
 
 Visit the live application: [Weatherly](https://weatherly-e5hy.vercel.app/)
 
-### Clone the Repository
+## Screenshot
 
-To set up the project locally:
+![Weatherly design (1)](https://github.com/user-attachments/assets/29785af2-1d16-4015-a1a5-3bd2116112b7)
 
-```bash
-git clone https://github.com/your-username/weatherly.git
-cd weatherly
 
-## Install Dependencies
-#### Make sure you have Node.js and npm installed. Then, run:
-```bash
-npm install
-
-## Add API Keys
-#### Create a .env file in the root directory and add the following:
-```bash
- VITE_API=your_openweather_api_key
-
-#### Replace your_openweather_api_key with your actual OpenWeather API key.
