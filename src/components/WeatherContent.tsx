@@ -21,11 +21,25 @@ export const WeatherContent: React.FC<WeatherContentProps> = ({ weather }) => {
         <div className="flex flex-wrap gap-4 px-4 py-6">
           <div className="flex bg-white min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#d0e0e6] p-6">
             <p className="text-[#0e171b] text-base font-medium leading-normal">Temperature</p>
-            <WeatherChart data={weather.hourlyForecast} type="temperature" />
+            <WeatherChart 
+            data={weather.hourlyForecast} 
+            type="temperature"
+            color="#f43f5e"
+            gradientFrom="#fee2e2"
+            gradientTo="#fee2e2"
+            gradientOpacity={0.2}
+             />
           </div>
           <div className="flex bg-white min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#d0e0e6] p-6">
             <p className="text-[#0e171b] text-base font-medium leading-normal">Precipitation</p>
-            <WeatherChart data={weather.hourlyForecast} type="precipitation" />
+            <WeatherChart 
+            data={weather.hourlyForecast}
+            type="precipitation"
+            color="#0ea5e9"
+            gradientFrom="#e0f2fe"
+            gradientTo="#e0f2fe"
+            gradientOpacity={0.2}
+         />
           </div>
         </div>
 
@@ -34,7 +48,7 @@ export const WeatherContent: React.FC<WeatherContentProps> = ({ weather }) => {
         </h3>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
           {weather.dailyForecast.map((day, index) => (
-            <div key={index} className="flex flex-col gap-3 p-3 rounded-xl bg-white border-2">
+            <div key={index} className="flex flex-col justify-center items-center text-center gap-3 p-3 rounded-xl bg-white border-2">
               <img
                 src={day.icon}
                 alt={`Weather for ${day.day}`}
@@ -44,9 +58,12 @@ export const WeatherContent: React.FC<WeatherContentProps> = ({ weather }) => {
                 <p className="text-[#0e171b] text-base font-medium leading-normal">
                   {day.day}
                 </p>
-                <p className="text-[#4f8296] text-sm font-semibold leading-normal">
-                  {day.minTemp}°F - {day.maxTemp}°F
+                <p className="text-sm leading-normal">
+                  <span className=' text-gray-800 font-medium'>{day.minTemp}°F</span>
+                  <span className="mx-1">|</span>
+                  <span className='text-gray-500'>{day.maxTemp}°F</span>
                 </p>
+                <p className="text-xs text-gray-500 mt-1 text-center">{day.description}</p>
               </div>
             </div>
           ))}
