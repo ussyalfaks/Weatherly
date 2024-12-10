@@ -2,7 +2,7 @@ import axios from 'axios';
 import { WeatherApiResponse, ForecastApiResponse, GeocodingApiResponse } from '../types/api';
 
 
-const API_KEY = import.meta.env.VITE_API || '';
+const API_KEY = import.meta.env.VITE_API;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const GEO_URL = 'https://api.openweathermap.org/geo/1.0';
 
